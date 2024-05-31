@@ -13,9 +13,9 @@ import {
 const Header = ({ name, taskCount }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.greeting}>Hello, Fabrice {name}</Text>
+      <Text style={styles.Appel}>Hello, Fabrice {name}</Text>
       <Text style={styles.taskCount}>{taskCount} 14 tasks today</Text>
-      <Image source={require("../assets/icon21.png")} style={styles.icon} />
+      <Image source={require("../assets/icon21.png")} style={styles.Photo} />
     </View>
   );
 };
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F7F0E8",
     top: 0,
   },
-  greeting: {
+  Appel: {
     fontSize: 24,
     width: 170,
     height: 37,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     alignContent: screenLeft,
     fontweight: 100,
   },
-  icon: {
+  Photo: {
     width: 50,
     height: 52,
   },
