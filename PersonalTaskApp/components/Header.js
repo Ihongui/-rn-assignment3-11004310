@@ -14,7 +14,7 @@ const Header = ({ name, taskCount }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.Appel}>Hello, Fabrice {name}</Text>
-      <Text style={styles.taskCount}>{taskCount} 14 tasks today</Text>
+      <Text style={styles.taskCount}>15 tasks today </Text>
       <Image source={require("../assets/icon21.png")} style={styles.Photo} />
     </View>
   );
@@ -37,9 +37,9 @@ const styles = StyleSheet.create({
   },
   taskCount: {
     width: 100,
-    height: 16,
+    height: 17,
     top: 20,
-    right: 170,
+    right: 190,
 
     fontSize: 14,
     color: "#000000",
