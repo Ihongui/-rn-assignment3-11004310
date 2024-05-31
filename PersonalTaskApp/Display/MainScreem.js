@@ -90,6 +90,7 @@ const MainScreem = () => {
         <TextInput style={styles.searchInput} placeholder="Search" />
         <Button title="Filter" onPress={() => {}} />
       </View>
+      <Text style={styles.testUpdate}>Categories</Text>
       <View style={styles.categoriesContainer}>
         {categories.map((category) => (
           <Category
@@ -100,6 +101,7 @@ const MainScreem = () => {
           />
         ))}
       </View>
+      <Text style={styles.textUpdate}>Ongoing Tasks</Text>
       <View style={styles.tasksContainer}>
         <FlatList
           data={tasks}
@@ -127,10 +129,22 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     flex: 1,
+    fontSize: 24,
     padding: 10,
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: "Yellow",
     borderRadius: 10,
+  },
+  textUpdate: {
+    fontSize: 30,
+    padding: 20,
+  },
+  testUpdate: {
+    fontSize: 30,
+    width: 170,
+    height: 37,
+    color: "#000000",
+    top: 0,
   },
   categoriesContainer: {
     flexDirection: "row",
