@@ -91,16 +91,22 @@ const MainScreem = () => {
         <Button title="Filter" onPress={() => {}} />
       </View>
       <Text style={styles.testUpdate}>Categories</Text>
-      <View style={styles.categoriesContainer}>
-        {categories.map((category) => (
-          <Category
-            key={category.id}
-            title={category.title}
-            tasks={category.tasks}
-            image={category.image}
-          />
-        ))}
-      </View>
+      <ScrollView
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        style={styles.horizontalScroll}
+      >
+        <View style={styles.categoriesContainer}>
+          {categories.map((category) => (
+            <Category
+              key={category.id}
+              title={category.title}
+              tasks={category.tasks}
+              image={category.image}
+            />
+          ))}
+        </View>
+      </ScrollView>
       <Text style={styles.textUpdate}>Ongoing Tasks</Text>
       <View style={styles.tasksContainer}>
         <FlatList
@@ -136,20 +142,21 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   textUpdate: {
-    fontSize: 30,
+    fontSize: 26,
     padding: 20,
   },
   testUpdate: {
-    fontSize: 30,
+    fontSize: 26,
     width: 170,
     height: 37,
     color: "#000000",
     top: 0,
   },
+  horizontalScroll: {
+    paddingVertical: 10,
+  },
   categoriesContainer: {
     flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
   },
   tasksContainer: {
     padding: 20,
